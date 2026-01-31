@@ -10,7 +10,7 @@ export default function Hero() {
         {/* Avatar */}
         <div className="mb-8 animate-fadeIn">
           <img
-            src=".\src\image\dp.png"
+            src="https://i.ibb.co.com/cSTSk993/Chat-GPT-Image-Jan-31-2026-10-27-57-PM.png"
             alt="Zafar Muhammed Akram"
             onClick={() => setImageOpen(true)}
             className="w-48 h-48 mx-auto rounded-full object-cover border-4 border-primary-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all cursor-pointer"

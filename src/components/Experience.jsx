@@ -5,7 +5,7 @@ export default function Experience() {
     {
       role: 'Research Assistant',
       company: 'DIU NLP & ML Research Lab',
-      period: '2023 - Present',
+      period: '2023 - 2026',
       description: [
         'Conducted research on NLP and Machine Learning models',
         'Developed test cases for model evaluation and validation',

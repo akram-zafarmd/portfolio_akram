@@ -4,6 +4,9 @@ import { FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi'
 
 export default function Hero() {
   const [imageOpen, setImageOpen] = useState(false)
+  
+  // Replace this URL with your actual image URL from ImgBB or Imgur
+  const profileImageUrl = "https://i.ibb.co.com/cSTSk993/Chat-GPT-Image-Jan-31-2026-10-27-57-PM.png"
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white px-4 py-20">
@@ -96,12 +99,14 @@ export default function Hero() {
               {/* Card */}
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 hover:shadow-3xl transition-all duration-300">
                 <img
-                  src="/profile.jpg"
+                  src={"https://i.postimg.cc/MZh3h76v/profile.png"}
                   alt="Zafar Muhammed Akram"
                   onClick={() => setImageOpen(true)}
                   className="w-full h-auto object-cover cursor-pointer hover:opacity-90 transition"
+                  loading="lazy"
                   onError={(e) => {
-                    e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%236366f1' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='80' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'%3EZA%3C/text%3E%3C/svg%3E"
+                    e.target.style.background = 'linear-gradient(135deg, #6366f1 0%, #10b981 100%)'
+                    e.target.textContent = 'Image not found'
                   }}
                 />
               </div>
@@ -122,17 +127,14 @@ export default function Hero() {
           >
             <button
               onClick={() => setImageOpen(false)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition"
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition z-10"
             >
               <FiX size={36} />
             </button>
             <img
-              src="/profile.jpg"
+              src={profileImageUrl}
               alt="Zafar Muhammed Akram - Full Size"
               className="w-full h-auto"
-              onError={(e) => {
-                e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%236366f1' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' font-size='80' fill='white' text-anchor='middle' dy='.3em' font-weight='bold'%3EZA%3C/text%3E%3C/svg%3E"
-              }}
             />
           </div>
         </div>

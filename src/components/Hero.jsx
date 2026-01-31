@@ -1,15 +1,40 @@
-import { FiDownload, FiMail } from 'react-icons/fi'
+import { useState } from 'react'
+import { FiDownload, FiMail, FiX } from 'react-icons/fi'
 
 export default function Hero() {
+  const [imageOpen, setImageOpen] = useState(false)
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 px-4">
       <div className="max-w-4xl mx-auto text-center py-20">
-        {/* Avatar Placeholder */}
+        {/* Avatar */}
         <div className="mb-8 animate-fadeIn">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-            <span className="text-5xl font-bold text-white">ZA</span>
-          </div>
+          <img
+            src="src\image\dp.png"
+            alt="Zafar Muhammed Akram"
+            onClick={() => setImageOpen(true)}
+            className="w-48 h-48 mx-auto rounded-full object-cover border-4 border-primary-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all cursor-pointer"
+          />
         </div>
+
+        {/* Image Modal */}
+        {imageOpen && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center p-4">
+            <div className="relative bg-white rounded-lg max-w-2xl w-full">
+              <button
+                onClick={() => setImageOpen(false)}
+                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition"
+              >
+                <FiX size={32} />
+              </button>
+              <img
+                src="src\image\1761076613137.jpg"
+                alt="Zafar Muhammed Akram - Full Size"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Name and Title */}
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 animate-slideIn">

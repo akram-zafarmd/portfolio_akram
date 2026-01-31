@@ -19,7 +19,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#home" className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition">
-            ZMA
+            AKRAM
           </a>
 
           {/* Desktop Navigation */}

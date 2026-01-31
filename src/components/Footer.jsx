@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-2">ZMA</h3>
+            <h3 className="text-2xl font-bold text-orange-500 mb-2">AKRAM</h3>
             <p className="text-sm">
               QA Engineer | Quality Advocate | Continuous Learner
             </p>

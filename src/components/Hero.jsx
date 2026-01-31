@@ -11,12 +11,20 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-slideIn">
+            {/* Full Name */}
+            <div>
+              <p className="text-primary-600 font-semibold text-lg mb-2">Welcome, I'm</p>
+              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600 mb-6">
+                Zafar Muhammed Akram
+              </h2>
+            </div>
+
             {/* Headline */}
             <div>
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
                 Software Quality
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">
+                <span className="text-gray-900">
                   Assurance Engineer
                 </span>
               </h1>
